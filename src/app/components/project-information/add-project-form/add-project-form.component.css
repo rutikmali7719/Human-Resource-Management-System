@@ -1,0 +1,23 @@
+.form-control.ng-touched.ng-invalid {
+  border: 1px solid tomato;
+}
+
+.form-control.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+
+.plus-icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+table {
+  box-shadow: 5px 5px 10px 10px rgb(193, 193, 193);
+}
+
+thead {
+  border-top: 1px solid #e1e1e1;
+}
+table tbody tr td {
+  vertical-align: middle;
+}

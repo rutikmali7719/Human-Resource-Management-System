@@ -1,0 +1,53 @@
+<th class="center">
+    <div class = "container">
+      <div class="row">
+        <div id=""custom-search-input>
+          <div class="input-group col-md-12" style="text-align: center">
+          <!-- <input type="text" class="search-query form-control" placeholder="Search by technology" name='trainingTechnology' [(ngModel)]="trainingTechnology"> -->
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button" (click)="getTrainingByTech()">
+              <span class="glyphicon glyphicon-search"></span> Search</button>
+          </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </th>
+    <table class = "center">
+      <caption >Training Program Details</caption>
+      <thead>
+        <tr>
+          <th class="primary" scope="col">Id</th>
+          <th scope="col">Training Name</th>
+          <th scope="col">Training Technology</th>
+          <th scope="col">No.of.Days</th>
+          <th scope="col">Start date</th>
+          <th scope="col">End date</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <tr *ngFor="let traind of training">
+            <td>{{traind.id}}</td>
+            <td>{{traind.trainingName}}</td>
+            <td>{{traind.trainingTechnology}}</td>
+            <td>{{traind.noOfDays}}</td>
+            <td>{{traind.startDate}}</td>
+            <td>{{traind.endDate}}</td>
+            <td class="text-center"><button type="button" class="btn btn-primary" (click) ="addTraining()">Update</button></td>
+            <td class="text-center"><button type="button" class="btn btn-danger" (click)="deleteTraining(traind.id)">Delete</button>
+      
+        </tr>
+          
+      <tfoot>
+        <tr>
+          <th>Total Courses</th>
+          <td colspan="4"><i>5 courses</i></td>
+        </tr>
+      </tfoot>
+    </table>
+    
+    
+    
